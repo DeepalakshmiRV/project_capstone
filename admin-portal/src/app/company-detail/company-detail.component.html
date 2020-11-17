@@ -1,0 +1,13 @@
+<div class="card text-center">
+    <div class="card-header">
+        {{company.name}}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Company Name: {{company.name}}</h5>
+    </div>
+    <div class="card-footer text-muted">
+        <button class="btn btn-secondary" (click)="goBack()">Go Back</button> |
+        <a class="btn btn-secondary" [routerLink]="['/company-edit', company._id]">Update</a> |
+        <button class="btn btn-secondary" (click)="deleteCompanyById(company._id)">Delete</button>
+    </div>
+</div>

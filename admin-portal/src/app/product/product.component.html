@@ -1,0 +1,28 @@
+<a class="btn btn-secondary" routerLink="/product-add">Add New Product</a>
+<br /><br />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Company</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products;let rowIndex=index">
+            <td>{{rowIndex+1}}</td>
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+
+            <td>{{product.company.name}}</td>
+
+            <td>
+                <a class="btn btn-secondary" [routerLink]="['/product-detail', product._id]">View Details</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

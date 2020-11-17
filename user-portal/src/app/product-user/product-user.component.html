@@ -1,0 +1,23 @@
+<div class="container align-content-center">
+
+<h3>Product List</h3>
+<table class="table" border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Buy</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.code}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+
+
+        <td>
+            <a [routerLink]="['/cart', { id:product.code }]">Buy Now</a>
+        </td>
+    </tr>
+</table>
+
+</div>

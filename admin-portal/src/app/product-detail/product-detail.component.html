@@ -1,0 +1,19 @@
+<div class="card text-center">
+    <div class="card-header">
+        Details of {{product.name}}
+    </div>
+    <div class="card-body">
+        <!-- <h5 class="card-title">Company Name: {{product.name}}</h5> -->
+        <p class="card-text">Product Code : {{ product.code}}</p>
+        <p class="card-text">Product Name : {{ product.name}}</p>
+        <p class="card-text">Product Details : {{ product.details}}</p>
+        <p class="card-text">Product Image : {{ product.image}}</p>
+        <!-- <p class="card-text">Product Company : {{ this.company.name }}</p> -->
+
+    </div>
+    <div class="card-footer text-muted">
+        <button class="btn btn-secondary" (click)="goBack()">Go Back</button> |
+        <a class="btn btn-secondary" [routerLink]="['/product-edit', product._id]">Update</a> |
+        <button class="btn btn-secondary" (click)="deleteProductById(product._id)">Delete</button>
+    </div>
+</div>
